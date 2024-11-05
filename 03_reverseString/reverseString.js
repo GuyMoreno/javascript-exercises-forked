@@ -9,6 +9,8 @@ const reverseString = function (string) {
     return joinArray;
 };
 console.log(reverseString("Hello World")); // dlroW olleH
+// shorten and better version below:
+// return string.split("").reverse().join("");
 
 // Do not edit below this line
 module.exports = reverseString;
