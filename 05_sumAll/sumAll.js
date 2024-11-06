@@ -1,10 +1,13 @@
 const sumAll = function (num1, num2) {
-    // innizialize result
-    let result = 0;
+    if (typeof num1 !== "number" ||
+        typeof num2 !== "number" ||
+        !Number.isInteger(num1) ||
+        !Number.isInteger(num2)) {
+        return "ERROR";
+    }
 
-    // check if order of parmaters wrong
+    let result = 0;
     if (num1 > num2) { //we don't want 👈🏽
-        // so change the paras to array
         // and then switch beween if needed
         [num1, num2] = [num2, num1];
     }
@@ -13,11 +16,12 @@ const sumAll = function (num1, num2) {
             result += i;
 
         }
+
     } else {
         return "ERROR";
     }
-    return result;
 
+    return result;
 };
 
 // Do not edit below this line
