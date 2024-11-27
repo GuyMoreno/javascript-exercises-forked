@@ -1,5 +1,3 @@
-
-
 const getAge = function (birth, death) {
     if (!death) {
         death = new Date().getFullYear();
@@ -17,7 +15,6 @@ const findTheOldest = function (people) {
         return oldestAge < currentAge ? currentPerson : oldest;
     });
 };
-
 
 // Do not edit below this line
 module.exports = findTheOldest;
